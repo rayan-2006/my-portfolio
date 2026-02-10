@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayan Script</title>
+
+  <!-- ==== Icon web ==== -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23111'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='JetBrains Mono, monospace' font-size='40' fill='%230f0'%3EJS%3C/text%3E%3C/svg%3E">
+  <!-- ==== Icon link ==== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ==== css style ==== -->
+  <link rel="stylesheet" href="/assets/css/index-heder.css">
+  <link rel="stylesheet" href="/assets/css/index-main.css">
+  <link rel="stylesheet" href="/assets/css/index-footer.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+  <!-- <div class="test"></div> -->
+  <!-- <div class="test2"></div> -->
+  <script src="/assets/js/index-main.js"></script>
+  <header>
+    <script src="/assets/js/index-header.js"></script>
+    <nav class="header-nav">
+      <ul class="header-ul">
+        <li><a class="heder-link" href="#about-me">Home</a></li>
+        <li><a class="heder-link" href="#Portfolio">Case Studies</a></li>
+        <li><a class="heder-link" href="#Testimonials">Testimonials</a></li>
+        <li><a class="heder-link" href="#">Recent work</a></li>
+        <li><a class="heder-link" href="#Get-In-Touch">Get In Touch</a></li>
+        <li class="social-icons">
+          <a href="https://www.linkedin.com/feed/" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/rayan-2006" title="github"><i class="fa-brands fa-github"></i></a>
+          <a href="https://x.com" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="about-me display-All" id="about-me">
+      <div class="about-me-text">
+        <h1>Rayan Script</h1>
+        <p>From a single line of code to fully built websites.<br> I'm Rayan, and right here I've put everything I've
+          ever
+          created for you to see: user management, search features, animations, and tons of other ideas.
+        </p>
+        <div class="about-me-btn">
+          <a href="#">
+            <button class="XL-btn" id="id">
+              Let’s get started
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="about-me-img">
+        <img src="/assets/Image/png/Intense Gaze in Red Light.png" alt="Rayan Script">
+      </div>
+    </div>
+    <div class="Skills display-All">
+      <p>My Skills :</p>
+      <div class="Skills-boxs">
+        <i class="fa-brands fa-html5" id="fa-html5" data-tooltip="HTML"></i>
+        <i class="fa-brands fa-css3-alt" id="fa-css3-alt" data-tooltip="CSS"></i>
+        <i class="fa-brands fa-js" id="fa-js" data-tooltip="JavaScript"></i>
+        <i class="fa-brands fa-bootstrap" id="fa-bootstrap" data-tooltip="Bootstrap"></i>
+        <i class="fa-brands fa-react" id="fa-react" data-tooltip="React"></i>
+        <i class="fa-brands fa-vuejs" id="fa-vuejs" data-tooltip="Vue.js"></i>
+        <i class="fa-brands fa-angular" id="fa-angular" data-tooltip="Angular"></i>
+        <i class="fa-brands fa-git-alt" id="fa-git-alt" data-tooltip="Git"></i>
+      </div>
+    </div>
+    <div class="Portfolio mine-contant mine-contant-w display-All" id="Portfolio">
+      <div class="mine-title">
+        <h3>Featured Projects</h3>
+        <p>Delivering user-centered solutions and business impact for over 2 years. From intuitive interfaces to
+          seamless fintech experiences, I turn complex challenges into elegant, high-performing products.
+        </p>
+      </div>
+      <div class="Portfolio-boxs" id="portfolio-container">
+        <script src="assets/js/portfolio-render.js"></script>
+      </div>
+    </div>
+    <div class="mine-contant display-All" id="Testimonials">
+      <div class="Testimonials-title mine-title">
+        <h3>Testimonials</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+      <div class="Testimonials-boxs">
+        <div class="Testimonials-boxs-orgin" id="testimonialsContainer">
+          <script src="/assets/js/testimonials.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="mine-contant display-All mine-contant-w">
+      <div class="Recent-Work-title mine-title">
+        <h3>Recent Work</h3>
+        <p>Solving user & business problems since last 15+ years.Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="Recent-Work-scroll-boxs">
+        <div class="flash-left"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="Recent-Work-scroll-track" id="RecentWorkTrack">
+          <script src="/assets/js/Recent-Work.js"></script>
+        </div>
+        <div class="flash-right"><i class="fa-solid fa-chevron-right"></i></div>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <script src="/assets/js/index-footer.js"></script>
+    <div class="Get-In-Touch footer-contant " id="Get-In-Touch">
+      <div class="Get-In-Touch-title footer-title">
+        <h3>Get In Touch</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
+      </div>
+      <div class="form-footer">
+        <form action="" id="contactForm" class="Get-In-Touch-form">
+          <div class="Email-content">
+            <label for="">Email</label>
+            <div class="Email-input form-input">
+              <input type="email" name="email" id="" placeholder="Please enter your email">
+            </div>
+          </div>
+          <div class="Mobile-content">
+            <label for="">Mobile</label>
+            <div class="tel-input form-input">
+              <input type="tel" name="mobile" id="" placeholder="Enter mobile">
+            </div>
+          </div>
+          <div class="Message-content">
+            <label for="">Message</label>
+            <div class="tex-input form-input">
+              <textarea name="message" placeholder="Enter your message"></textarea>
+            </div>
+          </div>
+          <div class="footer-forn-btn">
+            <button type="button">
+              Submit
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <nav>
+        <p>Made with Rayan</p>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>

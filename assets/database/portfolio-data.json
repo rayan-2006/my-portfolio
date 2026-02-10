@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Cafe Order Form",
+    "description": "Designed and developed a clean, intuitive ordering system for a modern cafe. Focused on fast selection, customization options, and seamless checkout to boost customer satisfaction and reduce order time.",
+    "src": "/assets/pages/coffee.html"
+  },
+  {
+    "title": "User Form",
+    "description": "Created a responsive user form with Persian support, intuitive inputs, and real-time validation — making data entry effortless and error-free for users across devices.",
+    "src": "assets/pages/form.html"
+  }
+]

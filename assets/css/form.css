@@ -1,0 +1,232 @@
+/* =========================
+   Base Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  background: radial-gradient(1200px 800px at 50% 0%, #1b1f3a, #0b0c14 70%);
+  color: #e6e6e6;
+  font-family: "Vazirmatn", system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* =========================
+   Box Container
+========================= */
+.box {
+  width: min(420px, 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   Title
+========================= */
+.box h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   Form
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.finput,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  color: #e6e6e6;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.finput::placeholder {
+  color: rgba(230, 230, 230, 0.55);
+}
+
+.finput:focus,
+select:focus {
+  border-color: rgba(58, 123, 213, 0.8);
+  box-shadow: 0 0 0 4px rgba(58, 123, 213, 0.18);
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn,
+.Fbtn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: #fff;
+  background: linear-gradient(135deg, #3a7bd5, #2a3b8d);
+  box-shadow: 0 10px 24px rgba(58, 123, 213, 0.25);
+}
+
+.btn:hover,
+.Fbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(58, 123, 213, 0.35);
+}
+
+.btn:active,
+.Fbtn:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* =========================
+   Modal
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Information-box {
+  width: min(640px, 100%);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.Information-box h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 10px;
+}
+
+/* =========================
+   List
+========================= */
+ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 14px 16px;
+  line-height: 1.8;
+  color: #e6e6e6;
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  border-color: rgba(58, 123, 213, 0.8);
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   Search Form
+========================= */
+.SearchForm {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.SearchFormIput {
+  flex: 1;
+}
+
+.SearchFormBTN {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3a7bd5, #2a3b8d);
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.SearchFormBTN:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Scrollbar
+========================= */
+.Information-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Information-box::-webkit-scrollbar-thumb {
+  background: rgba(58, 123, 213, 0.7);
+  border-radius: 10px;
+}
+
+.Information-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 480px) {
+  .box {
+    padding: 18px;
+  }
+
+  .Information-box {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "firstName": "Rayan",
+    "lastName": "Abdi",
+    "email": "mohammadabdia10s@gmail.com",
+    "image": "/assets/Image/png/bab61d3b-4dca-45b8-b158-1971d1a808b3.jpg",
+    "birthday": "2006-02-21",
+    "joinDate": "2026-01-01",
+    "bio": "Frontend developer & JS learner"
+  },
+  {
+    "id": 2,
+    "firstName": "Arash",
+    "lastName": "Sadeghi",
+    "email": "arash.sadeghi@example.com",
+    "image": "/assets/Image/png/5de0cb06-eb56-42f7-848e-032b6aaf745b.jpg",
+    "birthday": "1999-05-21",
+    "joinDate": "2026-01-01",
+    "bio": "undefined"
+  },
+  {
+    "id": 3,
+    "firstName": "Sara",
+    "lastName": "Mosavi",
+    "email": "sara.mosavi@example.com",
+    "image": "/assets/Image/png/Screenshot_20231122-022300_Photo Lab.jpg",
+    "birthday": "1997-10-10",
+    "joinDate": "2026-02-01",
+    "bio": "undefined"
+  },
+  {
+    "id": 4,
+    "firstName": "Mehdi",
+    "lastName": "Kazemi",
+    "email": "mehdi.kazemi@example.com",
+    "image": "assets/Image/png/Screenshot_20231123-022133_Photo Lab.jpg",
+    "birthday": "1995-07-05",
+    "joinDate": "2026-03-01",
+    "bio": "undefined"
+  },
+  {
+    "id": 5,
+    "firstName": "Narges",
+    "lastName": "Rezaee",
+    "email": "narges.rezaei@example.com",
+    "image": "assets/Image/png/Screenshot_20231124-022700_Photo Lab.jpg",
+    "birthday": "1998-09-12",
+    "joinDate": "2026-04-01",
+    "bio": "undefined"
+  },
+  {
+    "id": 6,
+    "firstName": "Amir",
+    "lastName": "Hosseini",
+    "email": "amir.hosseini@example.com",
+    "image": "/assets/Image/png/Screenshot_20231123-021433_Photo Lab.jpg",
+    "birthday": "1996-02-20",
+    "joinDate": "2026-05-01",
+    "bio": "undefined"
+  },
+  {
+    "id": 7,
+    "firstName": "Lila",
+    "lastName": "Ahmadi",
+    "email": "leila.ahmadi@example.com",
+    "image": "/assets/Image/png/Screenshot_20231123-022948_Photo Lab.jpg",
+    "birthday": "1994-11-30",
+    "joinDate": "2026-06-01",
+    "bio": "undefined"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "userId": 2,
+    "commentText": "This demo looks clean and simple, exactly what I needed for testing my layout."
+  },
+  {
+    "userId": 7,
+    "commentText": "The structure is clear, and the data flow is easy to follow, great for learning."
+  },
+  {
+    "userId": 3,
+    "commentText": "I like how the fake users and comments work together, very realistic for prototypes."
+  },
+  {
+    "userId": 6,
+    "commentText": "The code is organized well, and the results are consistent, perfect for a demo."
+  }
+]

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Head section: Meta tags, title, and external resources -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+  <!-- Link to custom CSS file -->
+  <link rel="stylesheet" href="/assets/css/cofee.css">
+</head>
+
+<body>
+  <!-- Main title for the cafe page -->
+  <h1 class="title">
+    Welcome to your cafee.
+  </h1>
+
+  <!-- Order form: User inputs for name, drink, and add-ons -->
+  <form class="order-box">
+    <h1>
+      Enter your order
+    </h1>
+
+    <!-- Input section for customer name -->
+    <div class="input-class">
+      <label for="Customer-name">your name</label>
+      <input type="text" name="" id="Customer-name" class="Customer-name" placeholder="your name...">
+    </div>
+
+    <!-- Select dropdown for drink choice -->
+    <div class="input-class">
+      <label for="Customer-drink">Choose your drink</label>
+      <select name="" id="Customer-drink" class="Customer-drink" title="Drink selection">
+        <option value="" disabled selected>Choose...</option>
+        <option value="Coffee">Coffee</option>
+        <option value="Tea">Tea</option>
+        <option value="Nescafe">Nescafe</option>
+      </select>
+    </div>
+
+    <!-- Text input for add-ons (commented select alternative below) -->
+    <div class="input-class">
+      <label for="Customer-Add-ons">Choose your add-ons</label>
+      <input type="text" name="" id="Customer-Add-ons" class="Customer-Add-ons" title="Choosing a beverage additive"
+        placeholder="your add ons">
+      <!-- Alternative: Commented select dropdown for add-ons
+      <select name="" id="Customer-Add-ons" class="Customer-Add-ons" title="Choosing a beverage additive">
+        <option value="" disabled selected>Choose</option>
+        <option value="milk">milk</option>
+        <option value="lemon">lemon</option>
+      </select> -->
+    </div>
+
+    <!-- Submit button to trigger order -->
+    <input type="button" value="BUY" class="btn" id="btn">
+  </form>
+
+  <!-- Invoice section: Table to display orders -->
+  <div class="Invoice">
+    <table border="1px" class="Invoice-table">
+      <!-- Table header row -->
+      <thead>
+        <tr>
+          <td>Customer name</td>
+          <td>Customer's drink</td>
+          <td>Customer Add-ons</td>
+        </tr>
+      </thead>
+
+      <!-- Table body: Dynamic rows added by JS -->
+      <tbody id="ordersTr">
+      </tbody>
+
+      <!-- Table footer: Clean button to clear orders -->
+      <tfoot>
+        <tr>
+          <td colspan="3" id="clean">clean</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- =================== -->
+  <!-- External JavaScript file for functionality -->
+  <script src="/assets/js/cofee.js" type="text/JavaScript"></script>
+  <!-- Fallback message if JavaScript is disabled -->
+  <noscript>
+    your browser doesn't support or has disabled JavaScript
+  </noscript>
+</body>
+
+</html>
