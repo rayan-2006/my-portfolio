@@ -218,8 +218,14 @@ show.addEventListener("click", async () => {
       <td>${user.email}</td>
       <td>${user.address.street}, ${user.address.suite}<br>
     ${user.address.city} ${user.address.zipcode}</td>
-      <td><button>lets go</button>
-      <button>lets go</button></td>
+      <td><button class="delete-btn" data-id="${user.id}">Delete</button>
+      <button class="edit-btn" data-id="${user.id}"
+              data-firstname="${user.name.split(' ')[0] || ''}"
+              data-lastname="${user.name.split(' ').slice(1).join(' ') || ''}"
+              data-phone="${user.phone || ''}"
+              data-email="${user.email || ''}"
+              data-address="${user.address.street || ''} ${user.address.suite || ''}
+${user.address.city || ''} ${user.address.zipcode || ''}">Edit</button></td>
       `
       tbody.appendChild(tr)
     });
@@ -284,3 +290,124 @@ show.addEventListener("click", async () => {
     show.style.cursor = 'pointer';
   }
 });
+tbody.addEventListener("click", async (e) => {
+  const deleteBtn = e.target.closest(".delete-btn");
+  const editBtn = e.target.closest(".edit-btn");
+  if (deleteBtn) {
+    const userId = deleteBtn.dataset.id;
+    try {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+        method: 'DELETE',
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP_ERROR_${response.status}`);
+      }
+      toast.show("User deleted successfully.", "success");
+      e.target.closest("tr").remove();
+    } catch (err) {
+      if (typeof err.message === "string" && err.message.startsWith("HTTP_ERROR_")) {
+        const status = Number(err.message.split("_")[2]);
+        console.error("Server responded with status:", status);
+        if (status >= 500) {
+          toast.show("Server error. Please try again later.", "error");
+        } else {
+          toast.show("Request failed. Please check your data.", "error");
+        }
+      }
+      else if (err instanceof TypeError) {
+        console.error("Network error:", err);
+        toast.show(
+          "No internet connection or the server is unreachable.",
+          "error"
+        );
+      }
+    }
+  } else if (editBtn) {
+
+    const modal = document.getElementById("modal");
+
+    const firstNameForm = document.getElementById("formFNetite");
+    const lastNameForm = document.getElementById("formLNetite");
+    const phoneForm = document.getElementById("formPHetite");
+    const emailForm = document.getElementById("formEMetite");
+    const addressForm = document.getElementById("formASetite");
+    const editForm = document.getElementById("EditeList");
+
+    /* ---------- OPEN MODAL ---------- */
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+
+    /* ---------- FILL FORM ---------- */
+    firstNameForm.value = editBtn.dataset.firstname || "";
+    lastNameForm.value = editBtn.dataset.lastname || "";
+    phoneForm.value = editBtn.dataset.phone || "";
+    emailForm.value = editBtn.dataset.email || "";
+    addressForm.value = editBtn.dataset.address || "";
+
+    const userId = editBtn.dataset.id;
+
+    /* ---------- PREVENT MULTIPLE SUBMIT LISTENERS ---------- */
+    editForm.onsubmit = async function (e) {
+      e.preventDefault();
+
+      try {
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${userId}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json; charset=UTF-8",
+            },
+            body: JSON.stringify({
+              name: `${firstNameForm.value} ${lastNameForm.value}`,
+              phone: phoneForm.value,
+              email: emailForm.value,
+              address: {
+                street: addressForm.value,
+              },
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP_ERROR_${response.status}`);
+        }
+
+        toast.show("User edited successfully.", "success");
+
+        /* ---------- CLOSE MODAL ---------- */
+        modal.style.opacity = "0";
+        modal.style.pointerEvents = "none";
+
+      } catch (err) {
+
+        if (err instanceof TypeError) {
+          console.error("Network error:", err);
+          toast.show(
+            "No internet connection or server is unreachable.",
+            "error"
+          );
+
+        } else if (
+          typeof err.message === "string" &&
+          err.message.startsWith("HTTP_ERROR_")
+        ) {
+          const status = Number(err.message.split("_")[2]);
+
+          console.error("Server error:", status);
+
+          if (status >= 500) {
+            toast.show("Server error. Please try again later.", "error");
+          } else {
+            toast.show("Edit failed. Please check your data.", "error");
+          }
+
+        } else {
+          console.error("Unknown error:", err);
+          toast.show("Something went wrong.", "error");
+        }
+      }
+    };
+  }
+}
+);

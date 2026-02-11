@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <div class="fprm-box">
+    <div class="form-box">
       <form id="userForm">
         <h1>User list</h1>
         <input id="formFN" type="text" placeholder="First Name">
@@ -43,6 +43,19 @@
         <tbody id="tbody">
         </tbody>
       </table>
+    </div>
+    <div class="modal" id="modal">
+      <div class="Information-box" id="InformationBox">
+        <form id="EditeList">
+          <h1>Edite User</h1>
+          <input id="formFNetite" type="text" placeholder="First Name">
+          <input id="formLNetite" type="text" placeholder="Last Name">
+          <input id="formPHetite" type="tel" placeholder="Phone">
+          <input id="formEMetite" type="email" placeholder="Email">
+          <textarea id="formASetite" placeholder="Address" maxlength="255" minlength="15" rows="4"></textarea>
+          <button id="addUseretite" type="submit">Edite</button>
+        </form>
+      </div>
     </div>
   </main>
   <script src="/assets/js/user-Table.js" defer></script>
